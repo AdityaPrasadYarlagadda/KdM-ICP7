@@ -1,0 +1,224 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#"
+     xml:base="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#haschild -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#haschild">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#hasparent"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#haskeyboard -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#haskeyboard">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#Computer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#KeyBoard"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#hasparent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#hasparent">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#isastudent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#isastudent">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#College"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#Memory -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#Memory">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#Computer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#byte"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#College -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#College">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#Computer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#Computer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#Computer">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#haskeyboard"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#KeyBoard"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#Cpu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#Cpu">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#Computer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#Daughter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#Daughter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#Father -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#Father">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#KeyBoard -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#KeyBoard">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#Computer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#Monitor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#Monitor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#Computer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#Mother -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#Mother">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#Son -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#Son">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#hasparent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#Father"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#attend -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#attend">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#College"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#doesnotattend -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#doesnotattend">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#College"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#ram -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#ram">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#Person"/>
+        <isastudent rdf:resource="http://www.semanticweb.org/adity/ontologies/2021/2/untitled-ontology-12#attend"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
